@@ -10,6 +10,7 @@
     <link rel="stylesheet" type="text/css" href="../css/styles.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/chords.css">
     <title>Chords</title>
 </head>
 
@@ -64,26 +65,57 @@
                     </span>
                 </div>
             </div>
-            <div class="row" style="place-content: center; justify-content: space-between;">
-                <div class="col-3" style="text-align: center; border-style: solid; border-radius: 10px;">
-                    <div style="padding: 30px">
-                        <h2>Violao</h2>
-                        <img src="../img/guitar.png" height="150px" width="150px">
-                    </div>
-                </div>
-                <div class="col-3" style="text-align: center; border-style: solid; border-radius: 10px;">
-                    <div style="padding: 30px">
-                        <h2>Teclado</h2>
-                        <img src="../img/piano.png" height="150px" width="150px">
-                    </div>
-                </div>
-                <div class="col-3" style="text-align: center; border-style: solid; border-radius: 10px;">
-                    <div style="padding: 30px">
-                        <h2>Ukelele</h2>
-                        <img src="../img/ukulele.png" height="150px" width="150px">
-                    </div>
-                </div>
+            <div class="row">
+                <div class="col">
+                    <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                            <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+                            <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+                            <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+                        </ol>
+                        <div class="carousel-inner" style="text-align: -webkit-center;">
 
+                            <div class="carousel-item active">
+                                <a href="index.html">
+                                    <img src="../img/guitar.png" class="d-block pic-size" alt="...">
+                                </a>
+
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h4>Violão</h4>
+                                </div>
+                            </div>
+
+                            <div class="carousel-item">
+                                <a href="index.html">
+                                    <img src="../img/piano.png" class="d-block pic-size" alt="...">
+                                </a>
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h4>Teclado</h4>
+                                </div>
+                            </div>
+
+
+                            <div class="carousel-item">
+                                <a href="index.html">
+                                    <img src="../img/ukulele.png" class="d-block pic-size" alt="...">
+                                </a>
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h4>Ukelele</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button"
+                            data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselExampleCaptions" role="button"
+                            data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
 

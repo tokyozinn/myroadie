@@ -1,0 +1,12 @@
+.teste h2:hover{
+    border-color: red;
+}
+
+.pic-size {
+    width: 350px;
+    height: 350px;
+}
+
+h4 {
+    color: black;
+}
