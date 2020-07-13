@@ -1,8 +1,8 @@
 class Artista {
 
-    constructor() {
+    constructor(nome) {
 
-        this.nome = "Shawn";
+        this.nome = nome;
 
     }
 }

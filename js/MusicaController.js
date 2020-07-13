@@ -5,10 +5,25 @@ class MusicaController {
         this.inputMusica = $('#nome_musica');
         this.inputArtista =  $('#nome_artista');
         this.inputDificuldade = $('#nota_dificuldade');
+        this.listaMusicas = new ListaMusicas();
     }
 
     cria(event){
-        let nota = this.inputMusica.value;
-        alert(nota);
+        let musica = new Musica(
+            this.inputMusica.value,
+            this.inputArtista.value,
+            this.inputDificuldade.value);
+        
+        this.listaMusicas.add(musica);
+        this._clearForm();
+
+        console.log(this.listaMusicas);
+    }
+
+    _clearForm() {
+        this.inputMusica.value = '';
+        this.inputArtista.value = '';
+
+        this.inputMusica.focus();
     }
 }
