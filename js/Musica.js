@@ -7,4 +7,5 @@ class Musica {
         this.dificuldade = dificuldade;
 
     }
+
 }

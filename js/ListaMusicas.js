@@ -1,10 +1,10 @@
 class ListaMusicas {
 
     constructor() {
-        this.ListaMusicas = [];
+        this.listaMusicas = [];
     }
 
     add(musica) {
-        this.ListaMusicas.push(musica);
+        this.listaMusicas.push(musica);
     }
 }
