@@ -2,8 +2,6 @@ class PlaylistController {
 
     constructor(){
         let $ = document.querySelector.bind(document);
-
-        this.
     }
 
     cria(event){
