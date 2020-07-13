@@ -79,12 +79,59 @@
                     </table>
                 </div>
             </div>
+            <!-- The Modal -->
+            <div class="modal" id="myModal">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+
+                        <!-- Modal Header -->
+                        <div class="modal-header">
+                            <h1 class="modal-title">Adicionar uma nova música</h1>
+                            <button type="button" class="close" data-dismiss="modal">×</button>
+                        </div>
+
+                        <!-- Modal body -->
+                        <div class="modal-body">
+                            <div class="form-group">
+                                <label for="nome_musica">Nome da música</label>
+                                <input type="text" class="form-control" placeholder="Enter email" id="nome_musica">
+                            </div>
+                            <div class="form-group">
+                                <label for="nome_artista">Artista</label>
+                                <input type="text" class="form-control" placeholder="Enter password" id="nome_artista">
+                            </div>
+                            <div class="form-group">
+                                <label for="nota_dificuldade">Dificuldade</label>
+                                <select class="form-control" id="nota_dificuldade">
+                                    <option>A</option>
+                                    <option>B</option>
+                                    <option>C</option>
+                                    <option>D</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Modal footer -->
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-success" data-dismiss="modal"
+                                onclick="controller.cria()">Adicionar</button>
+                            <button type="button" class="btn btn-danger" data-dismiss="modal">Fechar</button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        </div>
+        <div class="row" style="float: right; position: fixed; margin: 10px; right: 25px; bottom: 25px;">
+            <button type="button" class="btn btn-success" style="padding: 15px 30px; font-size: 2rem;" data-toggle="modal" data-target="#myModal">New Song</button>
         </div>
     </main>
     <footer class="footer">
         All rights reserved to me.
     </footer>
-        <!-- Optional JavaScript -->
+    <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
