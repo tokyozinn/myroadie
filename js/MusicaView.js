@@ -17,13 +17,13 @@ class MusicaView {
                 </tr>
             </thead>
             <tbody>
-                ${model.listaMusicas.map(m => {
+                ${model.musicas.map(m => {
 
                     return `
-                        <tr>
-                            <td>${m.nome}</td>
-                            <td>${m.artista.nome}</td>
-                            <td>${m.dificuldade}</td>
+                        <tr class="row-tabela">
+                            <td class="nome-musica">${m.nome}</td>
+                            <td class="nome-artista">${m.artista.nome}</td>
+                            <td class="dificuldade-musica">${m.dificuldade}</td>
                         </tr>
                     `
                 }).join('')}
@@ -33,7 +33,14 @@ class MusicaView {
     }
 
     update(model){
-
         this.id_html.innerHTML = this.template(model);
+    }
+
+    hide_element(e){
+        e.classList.add("d-none");
+    }
+
+    unhide_element(e){
+        e.classList.remove("d-none");
     }
 }

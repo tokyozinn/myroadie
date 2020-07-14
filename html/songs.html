@@ -58,7 +58,7 @@
         <div class="container">
             <div class="row" style="text-align: -webkit-right; padding: 3px 0px;">
                 <div class="col">
-                    <input type="text" name="filter" id="filter" placeholder="Pesquisa">
+                    <input type="text" name="filter" id="filter" placeholder="Pesquisa" oninput="controller.procura()">
                 </div>
             </div>
             <div class="row">
@@ -100,7 +100,7 @@
 
                         <!-- Modal footer -->
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-success" 
+                            <button type="button" class="btn btn-success" id="btn-add"
                                 onclick="controller.cria()">Adicionar</button>
                             <button type="button" class="btn btn-danger" data-dismiss="modal">Fechar</button>
                         </div>
