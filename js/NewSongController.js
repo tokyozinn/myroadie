@@ -38,14 +38,16 @@ class NewSongController {
     procura() {
         var campoBusca = this.pesquisa.value;
         var musicas = this.listaMusicas.wishList;
+        console.log('fui chamado!')
         var linhasTabela = document.querySelectorAll(".row-tabela");
         for(var i = 0; i < musicas.length; i++){
             var m = musicas[i].nome;
+            var a = musicas[i].artista.nome;
             var exp = new RegExp(campoBusca, "i");
-            if(!exp.test(m)){
-                this.musicasView.hide_element(linhasTabela[i]);
+            if(!exp.test(m) && !exp.test(a)){
+                this.wishListView.hide_element(linhasTabela[i]);
             }else{
-                this.musicasView.unhide_element(linhasTabela[i]);
+                this.wishListView.unhide_element(linhasTabela[i]);
             }
         }      
     };

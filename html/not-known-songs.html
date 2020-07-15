@@ -16,7 +16,7 @@
 <body>
     <header>
         <nav class="navbar navbar-expand-lg navbar-light bg-light"
-            style="padding: 1.5rem 5rem ; justify-content: space-between ">
+            style="padding: 0.5rem 3rem ; justify-content: space-between ">
             <a class="navbar-brand" href="./index.html"><img src="../img/logo.png" height="35px" width="100px"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -58,7 +58,7 @@
         <div class="container">
             <div class="row" style="text-align: -webkit-right; padding: 3px 0px;">
                 <div class="col">
-                    <input type="text" name="filter" id="filter" placeholder="Pesquisa">
+                    <input type="text" name="filter" id="filter" placeholder="Pesquisa" oninput="controller.procura()">
                 </div>
             </div>
             <div class="row">

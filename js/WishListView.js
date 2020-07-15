@@ -8,7 +8,7 @@ class WishListView {
     template(model) {
 
         return `
-        <table class="table table-striped table-dark">
+        <table class="table table-striped table-dark" style="text-align: center">
             <thead>
                 <tr>
                     <th scope="col">Música</th>
@@ -25,6 +25,7 @@ class WishListView {
                             <td class="nome-musica">${m.nome}</td>
                             <td class="nome-artista">${m.artista.nome}</td>
                             <td class="dificuldade-musica">${DateHelper.dateToText(m.data)}</td>
+                            <td style="text-align: center"><button class="btn btn-success" style="margin-right: 10px">Aprendi!</button><button class="btn btn-danger">Desisti</button></td>
                         </tr>
                     `
             }).join('')}
