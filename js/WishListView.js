@@ -24,7 +24,7 @@ class WishListView {
                         <tr class="row-tabela">
                             <td class="nome-musica">${m.nome}</td>
                             <td class="nome-artista">${m.artista.nome}</td>
-                            <td class="dificuldade-musica">${m.data}</td>
+                            <td class="dificuldade-musica">${DateHelper.dateToText(m.data)}</td>
                         </tr>
                     `
             }).join('')}
