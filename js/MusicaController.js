@@ -36,8 +36,9 @@ class MusicaController {
         var linhasTabela = document.querySelectorAll(".row-tabela");
         for(var i = 0; i < musicas.length; i++){
             var m = musicas[i].nome;
+            var a = musicas[i].artista.nome;
             var exp = new RegExp(campoBusca, "i");
-            if(!exp.test(m)){
+            if(!exp.test(m) && !exp.test(a)){
                 this.musicasView.hide_element(linhasTabela[i]);
             }else{
                 this.musicasView.unhide_element(linhasTabela[i]);
