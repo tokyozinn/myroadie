@@ -4,22 +4,25 @@ class NewSongController {
         let $ = document.querySelector.bind(document);
         this.inputMusica = $('#nome_musica');
         this.inputArtista = $('#nome_artista');
-        this.inputDificuldade = $('#nota_dificuldade');
-        this.listaMusicas = new ListaMusicas();
-        this.musicasView = new MusicaView($('#tabela-musica'));
+        this.inputData = $('#data-desejo');
+        this.listaMusicas = new WishList();
+        this.wishListView = new WishListView($('#wishlist-tabela'));
         this.pesquisa = $('#filter');
 
-        this.musicasView.update(this.listaMusicas);
+        this.wishListView.update(this.listaMusicas);
     }
 
     cria(event) {
         let musica = new Musica(
             this.inputMusica.value,
             this.inputArtista.value,
-            this.inputDificuldade.value);
+            this.inputDificuldade = '',
+            this.inputData.value);
+
+        console.log(musica);
 
         this.listaMusicas.add(musica);
-        this.musicasView.update(this.listaMusicas);
+        this.wishListView.update(this.listaMusicas);
         this._clearForm();
     }
 
@@ -32,7 +35,7 @@ class NewSongController {
 
     procura() {
         var campoBusca = this.pesquisa.value;
-        var musicas = this.listaMusicas.musicas;
+        var musicas = this.listaMusicas.wishList;
         var linhasTabela = document.querySelectorAll(".row-tabela");
         for(var i = 0; i < musicas.length; i++){
             var m = musicas[i].nome;
