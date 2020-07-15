@@ -8,12 +8,13 @@ class MusicaView {
     template(model) {
 
         return `
-        <table class="table table-striped table-dark">
+        <table class="table table-striped table-dark" style="text-align:center">
             <thead>
                 <tr>
                     <th scope="col">Música</th>
                     <th scope="col">Artista</th>
                     <th scope="col">Dificuldade</th>
+                    <th scope="col">Data</th>
                 </tr>
             </thead>
             <tbody>
@@ -24,6 +25,7 @@ class MusicaView {
                             <td class="nome-musica">${m.nome}</td>
                             <td class="nome-artista">${m.artista.nome}</td>
                             <td class="dificuldade-musica">${m.dificuldade}</td>
+                            <td class="data-musica">${DateHelper.dateToText(m.data)}</td>
                         </tr>
                     `
                 }).join('')}

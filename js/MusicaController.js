@@ -5,6 +5,7 @@ class MusicaController {
         this.inputMusica = $('#nome_musica');
         this.inputArtista = $('#nome_artista');
         this.inputDificuldade = $('#nota_dificuldade');
+        this.inputData = $('#data-musica');
         this.listaMusicas = new ListaMusicas();
         this.musicasView = new MusicaView($('#tabela-musica'));
         this.pesquisa = $('#filter');
@@ -16,7 +17,8 @@ class MusicaController {
         let musica = new Musica(
             this.inputMusica.value,
             this.inputArtista.value,
-            this.inputDificuldade.value);
+            this.inputDificuldade.value,
+            new Date(this.inputData.value));
 
         this.listaMusicas.add(musica);
         this.musicasView.update(this.listaMusicas);
