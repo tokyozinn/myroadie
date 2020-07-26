@@ -14,15 +14,20 @@ class MusicaController {
     }
 
     cria(event) {
-        let musica = new Musica(
-            this.inputMusica.value,
-            this.inputArtista.value,
-            this.inputDificuldade.value,
-            new Date(this.inputData.value));
-
-        this.listaMusicas.add(musica);
-        this.musicasView.update(this.listaMusicas);
-        this._clearForm();
+        try {
+            let musica = new Musica(
+                this.inputMusica.value,
+                this.inputArtista.value,
+                this.inputDificuldade.value,
+                new Date(this.inputData.value));
+    
+            this.listaMusicas.add(musica);
+            this.musicasView.update(this.listaMusicas);
+            this._clearForm();   
+        } catch (error) {
+            alert(error);
+        }
+        
     }
 
     _clearForm() {
