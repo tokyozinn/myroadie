@@ -19,8 +19,10 @@ class MusicaController {
                 this.inputMusica.value,
                 this.inputArtista.value,
                 this.inputDificuldade.value,
-                new Date(this.inputData.value));
+                new Date(DateHelper.textToDate(this.inputData.value)));
     
+                alert(typeof this.inputData.value);
+                alert(this.inputData.value);
             this.listaMusicas.add(musica);
             this.musicasView.update(this.listaMusicas);
             this._clearForm();   
